@@ -1,0 +1,276 @@
+
+/* Reset Stylesheet */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+.main-container {
+    background-color: #484848;
+    height:100vh;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+.form-container {
+    width:800px;
+    margin: 0 auto;
+    background-color:#fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+.form-container h2 {
+  color: #fff;
+  font-size: 35px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #484848;
+  margin: -2px -2px 0;
+}
+.form-input {
+    width:100%;
+}
+
+.form-input label {
+    font-size: 15px;
+    color: #989696;
+    padding: 10px 14px 0;
+    display: block;
+    order:1;
+}
+
+.form-group {
+    display: flex;
+}
+.text-area {
+    height: 100px;
+    border:0;
+    width:100%;
+    resize: none;
+    order:2;
+    padding: 3px 14px 0;
+}
+
+.text-area:focus {
+    outline:none;
+    font-size: 16px;
+}
+
+ .input {
+    width: 100%;
+    border: 0;
+    height: 35px;
+    font-size: 16px;
+    padding: 0 14px;
+    order:2;
+ }
+
+ input:focus {
+     border:none;
+     box-shadow: none;
+     outline: none;
+ }
+
+ .border-right {
+     border-right:1px solid #ddd;
+ }
+
+ .form-row {
+     border-bottom:1px solid #ddd;
+ }
+ .btn-container {
+    display: flex;
+    justify-content: flex-end;
+ }
+ .btn-container .btn {
+     width:170px;
+     height:62px;
+     background-color:red;
+     border:0;
+     text-transform: uppercase;
+     font-size: 18px;
+     color:#fff;
+     cursor: pointer;
+ }
+
+ .form-end-layer {
+    width:800px;
+    margin: 0 auto;
+    background-color:#fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #29ad29;
+    height: 425px;
+    align-items: center;
+    display: none;
+}
+
+.form-layer-content {
+    text-align: center;
+    width:100%;
+    margin-bottom:17px;
+}
+
+.form-layer-content h3 {
+    color:#fff;
+    font-size: 24px;
+}
+
+.form-layer-content h2 {
+    color:#fff;
+    font-size: 30px;
+    margin-bottom:7px;
+}
+
+.form-input label:after {
+    font-style: italic;
+    color: red;
+    margin-left: 3px;
+}
+.form-container .invalid {
+    border-bottom: 1px solid red;
+}
+
+.form-container .invalid + label:after {
+    content:'!'
+}
+.form-container input[type=email]:invalid {
+    border-bottom: 1px solid red;
+}
+
+.form-container input[type=email]:invalid + label:after {
+    content:'!'
+}
+.form-input {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-input label small p {
+    display: inline-block;
+    font-size: 13px;
+    color: red;
+    margin-left:10px;
+}
+
+
+@media (max-width: 991px) {
+    .form-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-group {
+        flex-direction: column;
+    }
+    .form-input {
+        border-bottom: 1px solid #ddd;    
+    }
+    .form-row {
+        border-bottom: 0;
+    }
+}
